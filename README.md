@@ -1,6 +1,12 @@
 # Global Food Supply Chain Resilience Analyzer
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/IshaanPotle/Global-Food-Supply-Chain-Resilience-Analyzer)
+
 A predictive analytics system for identifying food supply chain disruptions using LSTM and ARIMA models.
+
+## Repository
+
+- **GitHub:** [Global Food Supply Chain Resilience Analyzer](https://github.com/IshaanPotle/Global-Food-Supply-Chain-Resilience-Analyzer)
 
 ## Features
 
@@ -67,6 +73,34 @@ food_supply_chain_analyzer/
 - Seaborn, Matplotlib, Plotly
 - Streamlit, Scikit-learn
 - Apache Airflow (ETL orchestration)
+
+## Model & Data Access
+
+All trained model files (`.h5`, `.pkl`) and processed data (`.csv`) are available on Hugging Face:
+
+- **Hugging Face Dataset Repo:** [IshaanPotle27/global-food-supply-chain-models-and-data](https://huggingface.co/datasets/IshaanPotle27/global-food-supply-chain-models-and-data)
+
+### Downloading Models & Data
+
+You can download files directly from the Hugging Face web interface or programmatically using the `huggingface_hub` Python package:
+
+```python
+from huggingface_hub import hf_hub_download
+
+# Example: Download a model file
+model_path = hf_hub_download(
+    repo_id="IshaanPotle27/global-food-supply-chain-models-and-data",
+    filename="models/arima_temperature_celsius_forecaster.pkl",
+    repo_type="dataset"
+)
+
+# Example: Download a data file
+csv_path = hf_hub_download(
+    repo_id="IshaanPotle27/global-food-supply-chain-models-and-data",
+    filename="data/food_supply_chain_data.csv",
+    repo_type="dataset"
+)
+```
 
 ## License
 
